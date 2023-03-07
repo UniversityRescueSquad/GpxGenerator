@@ -1,10 +1,12 @@
 # GpxGenerator
 
-This project devides a given land area into smaller squares in order to coduct full-scale search and rescue operations.
+The GpxGenerator project is a tool designed to divide a given land area into smaller squares in order to conduct full-scale search and rescue operations.
 
 ## Description
 
-University Rescue Squad is a first responders rescue organization in Bulgaria that conducts search and rescue (SaR) operations in all kinds of natural terain. In order to guarantee and ensure a complete and thorough search of a particular area, rescuers are splitting this area into smaller quadrants that are later used for better navigation, more specific task setting for different SaR teams and easier tracking of what areas have already been searched. This project is meant to help SaR operaions by prociding a .gpx file with a grid of quadrants in a given area where rescuers need to work. This .gpx file is after that sent to GPS devices and used for communications with operational headquatters.
+The University Rescue Squad is a first responders rescue organization in Bulgaria that conducts search and rescue (SaR) operations in all kinds of natural terrain. To ensure a complete and thorough search of a particular area, rescuers split the area into smaller quadrants that are later used for better navigation, more specific task setting for different SaR teams, and easier tracking of what areas have already been searched.
+
+The GpxGenerator project helps SaR operations by providing a .gpx file with a grid of quadrants in a given area where rescuers need to work. This .gpx file is sent to GPS devices and used for communications with operational headquarters.
 
 ## Installation
 
@@ -12,30 +14,36 @@ An executable file can be downloaded from here.
 
 ## Usage
 
-Upon opening the GpxGenerator.exe file a console should pop-up. It would expect a long/lat inpit (in Decimal degreess), width and height of the searched area and quadrant width.
+To use GpxGenerator, simply run the GpxGenerator.exe file. A console should pop up, asking for input of the longitude and latitude in decimal degrees (of the down left most point of the particular area), width and height of the area, and quadrant width.
+
 ![Console](imgs/console.png)
 
 
-It will then create two .gpx files in the directory of the .exe file - grid.gpx and grid_with_names.gpx.
+After entering the required input, GpxGenerator creates two .gpx files in the directory of the .exe file: grid.gpx and grid_with_names.gpx.
+
 ![Map](imgs/map_snipped.png)
 
 
-grid.gpx will contain a grid of quadrants (routes) that split the area in equal squares. 
+The grid.gpx file contains a grid of quadrants (routes) that divide the area into equal squares.
+
 ![Map with grid](imgs/map_snipped_with_grid.png)
 
 
-grid_with_names.gpx will contain the same grid with additional GPS points in the down left corner of each quadrant. The points names will correspond to the quadrant name.
+The grid_with_names.gpx file contains the same grid with additional GPS points in the down left corner of each quadrant. The points names correspond to the quadrant name.
+
 ![Map with grid and quadrant names](imgs/map_snipped_with_grid_and_names.png)
 
 ## Limitations
 
-The project can only work with Decaimal degrees lat/long format.
+The GpxGenerator project can only work with decimal degrees lat/long format.
 
 ## License
 
+GpxGenerator is licensed under the MIT License:
+
 MIT License
 
-Copyright (c) [year] [author]
+Copyright (c) [2023] [Emil Nikolov, deputy head of University Rescue Squad]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -57,4 +65,5 @@ THE SOFTWARE.
 
 ## Acknowledgments
 
-The project is usually used with the map provided by https://bgmountains.org/bg/ - https://map.bgmountains.org/.
+The project is usually used with the map provided by 
+https://bgmountains.org/bg/ - https://map.bgmountains.org/.
