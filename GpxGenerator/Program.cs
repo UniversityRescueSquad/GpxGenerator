@@ -88,7 +88,7 @@ namespace GpxGenerator
                     XElement wpt = new XElement("wpt",
                         new XAttribute("lat", quadrantLatitude),
                         new XAttribute("lon", quadrantLongitude),
-                        new XElement("name", $"{GetQuadrantVerticalNames(j)} {i}"));
+                        new XElement("name", $"{GetQuadrantVerticalNames(j)}{i}"));
 
                     root.Add(wpt);
                 }
