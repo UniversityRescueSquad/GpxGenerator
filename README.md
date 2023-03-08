@@ -10,7 +10,7 @@ The GpxGridGenerator project helps SaR operations by providing a .gpx file with 
 
 ## Installation
 
-An executable file can be downloaded from here.
+An executable file can be downloaded from [here](https://drive.google.com/file/d/1z_pqN4cRS-pt2ARrjFX5k1wzDFH3H6-a/view?usp=share_link).
 
 ## Usage
 
@@ -40,6 +40,8 @@ The GpxGridGenerator project can only work with decimal degrees lat/long format.
 The tool is developed for the needs of SaR team in Bulgaria and is not tested in different latitudes and longitudes. I presume it will not work as expected around the poles and around the 180th meridian.
 
 Also this tool is designed to cover relatively small areas of land (rarely more than 15-20km radius). It presumes the Earth is a perfect sphere with a radius of 6,371,000 meters. Which means that the bigger the grid, the bigger the error.
+
+Another limitation is that the tool relies on correctly entered input data. There is no error handling.
 
 ## Contributing
 
