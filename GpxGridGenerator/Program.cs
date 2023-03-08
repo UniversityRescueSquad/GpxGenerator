@@ -8,8 +8,10 @@ namespace GpxGenerator
     {
         private const string rootGpxElement = "rte";
         private const string rootPointGpxElement = "rtept";
+        private const string pointGpxElement = "wpt";
         private const string latitudeGpxElement = "lat";
         private const string longitudeGpxElement = "lon";
+        private const string nameGpxElement = "name";
         private const double metersPerLatitudeDegree = 110574;
         private const double metersPerLongitudeDegree = 111320;
         private const double degreesToRadians = Math.PI / 180.0;
@@ -85,10 +87,10 @@ namespace GpxGenerator
                     double quadrantLongitude = longitude + i * longitudeIncrement;
                     double quadrantLatitude = latitude + j * latitudeIncrement;
 
-                    XElement wpt = new XElement("wpt",
-                        new XAttribute("lat", quadrantLatitude),
-                        new XAttribute("lon", quadrantLongitude),
-                        new XElement("name", $"{GetQuadrantVerticalNames(j)}{i}"));
+                    XElement wpt = new XElement(pointGpxElement,
+                        new XAttribute(latitudeGpxElement, quadrantLatitude),
+                        new XAttribute(longitudeGpxElement, quadrantLongitude),
+                        new XElement(nameGpxElement, $"{GetQuadrantVerticalNames(j)}{i}"));
 
                     root.Add(wpt);
                 }
